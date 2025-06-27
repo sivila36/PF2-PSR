@@ -174,4 +174,24 @@ La página de bienvenida incluye:
 - En producción, cambiar la `secret_key` por una clave segura
 - La base de datos se crea automáticamente al ejecutar el servidor
 - El modo debug está habilitado para desarrollo
-- Las contraseñas nunca se almacenan en texto plano 
+- Las contraseñas nunca se almacenan en texto plano
+
+## 🎨 Capturas de pantalla de pruebas exitosas.
+![image](https://github.com/user-attachments/assets/1359aaf5-8f83-4ee9-8fae-a0ca77054e1b)
+
+![image](https://github.com/user-attachments/assets/0de932a0-c5b6-4b5d-936e-ea55684e25ae)
+
+## 🧠 Respuestas Conceptuales:
+### 🔐 ¿Por qué hashear contraseñas?
+Hashear contraseñas es fundamental por seguridad. Si una base de datos es comprometida, las contraseñas almacenadas en texto plano pueden ser leídas fácilmente. Al hashearlas:
+- Se vuelven ilegibles para terceros.
+- Aumentás la seguridad de los usuarios.
+- Es una práctica estándar recomendada por OWASP.
+- Librerías como werkzeug.security (en Flask) permiten aplicar hashing con funciones como generate_password_hash, que incluyen salting automáticamente.
+
+### 🗃️ Ventajas de usar SQLite en este proyecto.
+- Simplicidad: No necesita configuración de servidor ni credenciales.
+- Portabilidad: La base de datos es un archivo .db, fácil de mover o versionar.
+- Ideal para prototipos o proyectos pequeños: Como es tu caso.
+- Ligereza: Consume pocos recursos.
+- SQLite es perfecto para proyectos educativos o de prueba, aunque no es lo ideal para sistemas de gran escala o con alta concurrencia.
